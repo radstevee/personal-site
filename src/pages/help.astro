@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="help">
+  <div class="flex flex-col items-center justify-center h-full">
+    <h1 class="text-4xl font-bold mb-8 text-nvim-blue">help i'm stuck</h1>
+    <div class="text-center">
+      <div class="flex flex-col text-left justify-left p-10">
+        <p class="p-4">some instructions on how to use this monstrosity (and some general vim tips)</p>
+
+        <p class="ml-4"><a class="font-bold">u  </a>: undo the last change, in this case, it navigates up one level</p>
+        <p class="ml-4"><a class="font-bold">j  </a>: move the cursor down one line</p>
+        <p class="ml-4"><a class="font-bold">k  </a>: move the cursor up one line</p>
+        <p class="ml-4"><a class="font-bold">gg </a>: move the cursor to the first line of the file, in this case, page</p>
+        <p class="ml-4"><a class="font-bold">G  </a>: move the cursor to the last line of the file, in this case, page</p>
+        <p class="ml-4"><a class="font-bold">:&lt;command&gt;</a>: executes a command</p>
+      </div>
+    </div>
+  </div>
+</Layout>
