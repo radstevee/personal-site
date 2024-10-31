@@ -49,6 +49,7 @@ document.addEventListener('keydown', (e: KeyboardEvent) => {
     default:
       if (currentMode === 'COMMAND' || currentMode === 'SEARCH') {
         e.preventDefault();
+        if (e.key == "Shift") return;
         commandBuffer += e.key;
         window.updateStatusBar(undefined, commandBuffer);
       } else {
@@ -81,6 +82,8 @@ function handleCommand(command: string) {
       case 'contact':
         window.location.href = '/contact';
         break;
+      case 'qa':
+      case 'qa!':
       case 'q':
         window.close();
         window.location.href = '/exited';
