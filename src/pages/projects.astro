@@ -1,0 +1,51 @@
+---
+import CenteredLayout from '../layouts/CenteredLayout.astro';
+import Link from '../layouts/Link.astro';
+---
+
+<CenteredLayout>
+  <header is-="column" gap-="1" space-="px:1">
+    <h1 autofocus>projects</h1>
+    <p>here are some projects i have worked on:</p>
+
+    <div id="projects" box-="square" shear-="top">
+      <row>
+        <span is-="badge" variant-="background0">
+          projects
+        </span>
+      </row>
+      <column space-="px:1 pb:1" is-="typography-block">
+        <Link href="https://github.com/radstevee/axi">
+          <code>axi</code>
+          <span>- a modern minecraft game engine based on kotlin coroutines</span>
+        </Link>
+
+        <Link href="https://github.com/radstevee/packed">
+          <code>packed</code>
+          <span>- a minecraft resource pack compiler for kotlin</span>
+        </Link>
+
+        <Link href="https://github.com/mcbrawls/inject">
+          <code>inject</code>
+          <span>- a library for minecraft servers to make netty injection easier</span>
+        </Link>
+
+        <Link href="https://github.com/radstevee/scale">
+          <code>scale</code>
+          <span>- an autoscaling implementation for minecraft using podman (private WIP)</span>
+        </Link>
+
+        <Link href="https://github.com/radstevee/rwm">
+          <code>rwm</code>
+          <span>- my own X11 (and maybe in the future wayland) window manager</span>
+        </Link>
+
+        <Link href="https://github.com/ferrumc-rs/ferrumc">
+          <code>ferrumc</code>
+          <span>- a rust implementation of the minecraft server</span>
+        </Link>
+      </column>
+    </div>
+  </header>
+</CenteredLayout>
+

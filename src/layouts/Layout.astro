@@ -1,0 +1,35 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+---
+
+<!doctype html>
+<html lang="en" data-webtui-theme="catppuccin">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <meta name="generator" content={Astro.generator} />
+    <title>rad's page</title>
+
+    <!-- OpenGraph / X Title -->
+    <meta property="og:title" content="rad's page" />
+    <meta name="twitter:title" content="rad's page" />
+
+    <!-- Misc Metadata -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://radsteve.net" />
+    <meta name="twitter:site" content="@radstevee_" />
+    <meta name="twitter:creator" content="@radstevee_" />
+    <meta name="twitter:url" content="https://radsteve.net" />
+    <meta name="theme-color" content="#1e1e2e" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400..600;1,400..600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

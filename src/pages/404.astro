@@ -1,0 +1,19 @@
+---
+import Links from '../components/Links.astro';
+import CenteredLayout from '../layouts/CenteredLayout.astro';
+---
+
+<CenteredLayout>
+  <header is-="column" gap-="1" space-="px:1">
+    <h1 autofocus>404</h1>
+
+    <p>
+      woah there, traveller! i couldn't find the page you were looking for :(
+      <br />
+      maybe these can help you?
+    </p>
+
+    <Links showHome=true />
+  </header>
+</CenteredLayout>
+

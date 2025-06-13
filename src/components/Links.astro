@@ -1,0 +1,47 @@
+---
+import Link from '../layouts/Link.astro';
+
+const { showHome } = Astro.props;
+---
+
+<div id="links" box-="square" shear-="top">
+  <row>
+    <span is-="badge" variant-="background0">
+      links
+    </span>
+  </row>
+  <column space-="px:1 pb:1" is-="typography-block">
+    {showHome &&
+      <Link href="/">
+        <code id="nf">&#xf46d</code>
+        <span>home</span>
+      </Link>
+    }
+
+    <Link href="/about">
+      <code id="nf">&#xf15c</code>
+      <span>about me</span>
+    </Link>
+
+    <Link href="/projects">
+      <code id="nf">&#xebeb</code>
+      <span>projects</span>
+    </Link>
+
+    <Link href="/contact">
+      <code id="nf">&#xf05b8</code>
+      <span>contact</span>
+    </Link>
+
+    <Link href="https://github.com/radstevee" target="_blank">
+      <code id="nf">&#xe702</code>
+      <span>git</span>
+    </Link>
+  </column>
+</div>
+
+<style>
+#nf {
+  font-family: "JetBrains Mono", Menlo, Monaco, monospace, "Symbols Nerd Font";
+}
+</style>

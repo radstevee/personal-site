@@ -1,0 +1,134 @@
+---
+const url = Astro.url.pathname;
+
+let isOn: 'about' | 'projects' | 'contact' | 'home' = 'home';
+
+if (url === '/about') {
+  isOn = 'about';
+} else if (url === '/projects') {
+  isOn = 'projects';
+} else if (url === '/contact') {
+  isOn = 'contact';
+} else if (url === '/') {
+  isOn = 'home';
+}
+---
+
+<nav box-="square">
+  <a href="/" id="home-link" data-active={isOn === "home"}>
+    <span>&#xf46d home</span>
+  </a>
+  <row id="links">
+    <a href="/about" data-active={isOn === "about"}>
+      <span>&#xf15c</span>
+      <span>about</span>
+    </a>
+    <a href="/projects" data-active={isOn === "projects"}>
+      <span>&#xebeb</span>
+      <span>projects</span>
+    </a>
+    <a href="/contact" data-active={isOn === "contact"}>
+      <span>&#xf05b8</span>
+      <span>contact</span>
+    </a>
+    <a href="https://github.com/radstevee" target="_blank">
+      <span>&#xe702</span>
+      <span>git</span>
+    </a>
+  </row>
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1lh 2ch;
+    container-type: inline-size;
+    container-name: navbar;
+    --box-border-color: var(--background1);
+    white-space: nowrap;
+
+    #home-link {
+      text-decoration: none;
+      font-weight: bold;
+      color: var(--foreground1);
+
+      span:first-of-type {
+        color: #a6e3a1;
+      }
+
+      &:focus,
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &[data-active="true"] {
+        color: var(--foreground0);
+        font-weight: bold;
+      }
+    }
+  }
+
+  #links {
+    row-gap: 2ch;
+    column-gap: 1lh;
+
+    a {
+      display: inline-flex;
+      gap: 1ch;
+      text-decoration: none;
+      color: var(--foreground2);
+
+      &[data-active="true"] {
+        color: var(--foreground0);
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+      &:focus,
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  #search-button {
+    display: inline-flex;
+    gap: 1ch;
+  }
+
+  @media (max-width: 84ch) {
+    #links {
+      gap: 1ch;
+
+      a {
+        background-color: var(--background1);
+        padding: 0 1ch;
+        span:last-of-type {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 54ch) {
+    nav {
+      align-items: normal;
+      gap: 10px;
+    }
+    #search-button span:last-of-type {
+      display: none;
+    }
+  }
+
+  @media (max-width: 44ch) {
+    nav {
+      flex-direction: column;
+    }
+    #home-link {
+      font-size: 20px;
+    }
+  }
+</style>
+

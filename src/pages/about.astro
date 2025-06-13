@@ -1,0 +1,27 @@
+---
+import CenteredLayout from '../layouts/CenteredLayout.astro';
+import Link from '../layouts/Link.astro';
+---
+
+<CenteredLayout>
+  <header is-="column" gap-="1" space-="px:1">
+    <h1 tabindex="0" autofocus>
+      hello!
+    </h1>
+    <p tabindex="0">
+      hey, my name is rad. i'm a software engineer and like making random apps for myself!
+      <br />
+      occasionally there may be something useful for you as well, but, that's a bit rare to
+      be honest.
+      <br />
+      i also <strong>really</strong> like neovim, this entire page is laid out like a tui
+      and fully made in neovim.
+      <br />
+      my favourite programming languages are rust and kotlin!
+      <br />
+      i'm also a moderator at
+      <Link href="https://mcbrawls.net">mc brawls</Link>
+      and contribute to some of our libraries every so often!
+    </p>
+  </header>
+</CenteredLayout>

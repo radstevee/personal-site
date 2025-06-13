@@ -1,0 +1,24 @@
+---
+const { href } = Astro.props;
+---
+
+<a href={href} id="link">
+  <span><slot /></span>
+</a>
+<style>
+#link {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--foreground1);
+
+  span:first-of-type {
+    color: #a6e3a1;
+  }
+
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
+}
+</style>

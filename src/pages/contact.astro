@@ -1,0 +1,47 @@
+---
+import CenteredLayout from '../layouts/CenteredLayout.astro';
+import Link from '../layouts/Link.astro';
+---
+
+<CenteredLayout>
+  <header is-="column" gap-="1" space-="px:1">
+    <h1 autofocus>contact</h1>
+    <p>this is how you can reach out to me!</p>
+
+    <div id="contact" box-="square" shear-="top">
+      <row>
+        <span is-="badge" variant-="background0">
+          contact
+        </span>
+      </row>
+      <column space-="px:1 pb:1" is-="typography-block">
+        <Link href="mailto:hello@radsteve.net">
+          <code id="nf">&#xf01f0</code>
+          <span>- hello [@] radsteve [.] net</span>
+        </Link>
+
+        <Link href="https://discord.gg/DEDEu3dY">
+          <code id="nf">&#xf1ff</code>
+          <span>- @radstevee</span>
+        </Link>
+
+        <Link href="https://bsky.app/profile/rad.yuri.observer">
+          <code id="nf">&#xe28e</code>
+          <span>- @rad.yuri.observer</span>
+        </Link>
+
+        <Link href="https://x.com/radstevee_/">
+          <code id="nf">&#xeb72</code>
+          <span>- @radstevee_ (inactive, use bsky instead)</span>
+        </Link>
+      </column>
+    </div>
+  </header>
+</CenteredLayout>
+
+<style>
+#nf {
+  font-family: "JetBrains Mono", Menlo, Monaco, monospace, "Symbols Nerd Font";
+}
+</style>
+

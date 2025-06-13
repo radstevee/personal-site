@@ -1,0 +1,116 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+
+const { page } = Astro.props;
+---
+
+<Layout>
+  <row self-="grow" align-="center" id="section">
+    <column>
+      <column gap-="1" space-="px:2 py:1" id="main">
+        <Navbar />
+        <column gap-="1">
+          <slot />
+        </column>
+
+        <row id="statusline">
+          <span is-="badge" variant-="blue">NORMAL</span>
+          <span is-="badge" variant-="background1">
+            <span class="branch-name">&#xe725; master</span>
+          </span>
+          <row self-="grow">
+            <span is-="badge" variant-="background0">{page}</span>
+          </row>
+          <span is-="badge" variant-="background0">utf-8</span>
+          <span is-="badge" variant-="background1">
+            <span id="percent">Top</span>
+          </span>
+          <span is-="badge" variant-="blue"><span id="line">1</span>:1</span>
+        </row>
+      </column>
+      <input id="cmdline" aria-label="vim cmdline" />
+      </column>
+    </column>
+  </row>
+</Layout>
+
+<style>
+  #start-links {
+    --box-border-color: var(--background2);
+    display: flex;
+    flex-direction: column;
+    gap: 1lh;
+
+    a {
+      text-decoration: none;
+      color: var(--foreground1);
+      display: inline-flex;
+      gap: 1ch;
+
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  #statusline {
+    background-color: var(--background0);
+    padding: 0px 0px 0px 0px;
+  }
+
+  #cmdline {
+    background-color: var(--background0);
+    padding: 0;
+  }
+
+  #section {
+    background-color: var(--crust);
+    padding: 1lh 2ch;
+
+    #main {
+      background-color: var(--background0);
+      width: 100ch;
+    }
+  }
+
+  header h1 strong {
+    text-decoration: underline;
+    color: #eba0ac;
+  }
+
+  header [tabindex="0"]:focus {
+    background-color: var(--background1);
+  }
+
+  .branch-name {
+    color: #89b4fa;
+  }
+
+  #shorcuts-badge {
+    display: inline-flex;
+  }
+
+  #content-badge {
+    display: none;
+  }
+
+  @media (max-width: 80ch) {
+    #statusline,
+    #cmdline {
+      display: none;
+    }
+
+    #start-links code {
+      display: none;
+    }
+
+    #shorcuts-badge {
+      display: none;
+    }
+
+    #content-badge {
+      display: inline-flex;
+    }
+  }
+</style>
