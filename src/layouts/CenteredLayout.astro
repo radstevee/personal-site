@@ -70,7 +70,10 @@ const { page } = Astro.props;
 
     #main {
       background-color: var(--background0);
-      width: 100ch;
+
+      @media not (max-width: 80ch) {
+        width: 80ch;
+      }
     }
   }
 
