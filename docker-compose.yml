@@ -1,5 +1,0 @@
-services:
-  site:
-    build: .
-    ports:
-      - 4321:80
