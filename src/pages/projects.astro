@@ -6,7 +6,7 @@ import Link from '../components/Link.astro';
 <CenteredLayout>
   <header is-="column" gap-="1" space-="px:1">
     <h1 autofocus>projects</h1>
-    <p>here are some projects i have worked on:</p>
+    <p>here are some projects i have worked on or am currently working on:</p>
 
     <div id="projects" box-="square" shear-="top">
       <row>
@@ -35,14 +35,15 @@ import Link from '../components/Link.astro';
           <span>- an autoscaling implementation for minecraft using podman (private WIP)</span>
         </Link>
 
-        <Link href="https://github.com/radstevee/rwm">
-          <code>rwm</code>
-          <span>- my own X11 (and maybe in the future wayland) window manager</span>
-        </Link>
-
         <Link href="https://github.com/ferrumc-rs/ferrumc">
           <code>ferrumc</code>
           <span>- a rust implementation of the minecraft server</span>
+        </Link>
+
+        <Link href="https://beta.potassium.sh">
+          <code>potassium.sh</code>
+          <span>- an indie development studio, i work on the backend and sometimes the frontend</span>
+          <span> - <strong>we do commissions</strong>!</span>
         </Link>
       </column>
     </div>
