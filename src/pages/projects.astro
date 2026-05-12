@@ -6,44 +6,34 @@ import Link from '../components/Link.astro';
 <CenteredLayout>
   <header is-="column" gap-="1" space-="px:1">
     <h1 autofocus>projects</h1>
-    <p>here are some projects i have worked on or am currently working on:</p>
+    <p>Here are some projects I'm currently working on!</p>
 
     <div id="projects" box-="square" shear-="top">
       <row>
         <span is-="badge" variant-="background0">
-          projects
+          Projects
         </span>
       </row>
+
       <column space-="px:1 pb:1" is-="typography-block">
-        <Link href="https://github.com/radstevee/axi">
-          <code>axi</code>
-          <span>- a modern minecraft game engine based on kotlin coroutines</span>
+        <Link href="https://themurderrproject.com">
+          <code>The Murd[ERR] Project</code>
+          <span>- A ten-player social deduction game in Minecraft</span>
+        </Link>
+
+        <Link href="https://temper-mc.com">
+          <code>Temper</code>
+          <span>- A Minecraft server implementation in Rust</span>
         </Link>
 
         <Link href="https://github.com/radstevee/packed">
           <code>packed</code>
-          <span>- a minecraft resource pack compiler for kotlin</span>
+          <span>- A Minecraft resource pack compiler for Kotlin</span>
         </Link>
 
         <Link href="https://github.com/mcbrawls/inject">
           <code>inject</code>
-          <span>- a library for minecraft servers to make netty injection easier</span>
-        </Link>
-
-        <Link href="https://github.com/radstevee/scale">
-          <code>scale</code>
-          <span>- an autoscaling implementation for minecraft using podman (private WIP)</span>
-        </Link>
-
-        <Link href="https://github.com/ferrumc-rs/ferrumc">
-          <code>ferrumc</code>
-          <span>- a rust implementation of the minecraft server</span>
-        </Link>
-
-        <Link href="https://beta.potassium.sh">
-          <code>potassium.sh</code>
-          <span>- an indie development studio, i work on the backend and sometimes the frontend</span>
-          <span> - <strong>we do commissions</strong>!</span>
+          <span>- A library for Minecraft servers to make Netty injection easier</span>
         </Link>
       </column>
     </div>

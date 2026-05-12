@@ -7,7 +7,7 @@ import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://radsteve.net',
+  site: 'https://rad.vg',
   integrations: [mdx(), sitemap()],
 
   vite: {
